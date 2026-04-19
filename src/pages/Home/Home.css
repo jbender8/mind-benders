@@ -1,9 +1,55 @@
 /* Home Page Styling */
 .main-content {
-  padding: 60px 20px;
+  padding: 20px 0;
   max-width: 1200px;
   margin: 0 auto;
   background: white;
+}
+.welcome-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.welcome-text {
+  background: #254117;
+  color: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 100, 0, 0.3);
+}
+
+.welcome-text h1 {
+  font-size: 4rem;
+  margin: 0 0 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.welcome-image {
+  display: flex;
+  justify-content: center;
+  transform: scale(1.15);
+}
+
+.welcome-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
 }
 
 /* Store Location Section */
@@ -148,6 +194,40 @@
 @media (max-width: 768px) {
   .main-content {
     padding: 40px 20px;
+  }
+
+  .welcome-section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+  }
+
+  .welcome-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 100%;
+  }
+
+  .welcome-text {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+  }
+
+  .welcome-text p {
+    font-size: 1.2rem;
+  }
+
+  .welcome-image {
+    transform: none;
+  }
+
+  .welcome-image img {
+    max-width: 90%;
+    border: 3px solid white;
   }
 
   .store-location {

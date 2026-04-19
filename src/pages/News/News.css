@@ -5,7 +5,7 @@
 }
 
 .page-section {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 60px 40px;
 }
@@ -53,6 +53,36 @@
   line-height: 1.7;
   color: #555;
   margin: 0;
+}
+
+.facebook-feed-section {
+  margin-top: 60px;
+}
+
+.facebook-feed-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.facebook-feed-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 12px;
+}
+
+.facebook-feed-wrapper iframe {
+  width: 100%;
+  min-height: 1000px;
+  border-radius: 12px;
+  background: white;
+  border: none;
+  overflow: hidden;
+}
+
+.facebook-note {
+  font-size: 0.95rem;
+  color: #666;
 }
 
 /* Responsive Design */

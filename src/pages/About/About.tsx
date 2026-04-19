@@ -52,14 +52,39 @@ export default function About() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.3686831844433!2d-87.47796!3d41.66089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f85c1e7c1c1c1%3A0x1c1c1c1c1c1c1c1c!2s1442%20119th%20St%2C%20Whiting%2C%20IN%2046394!5e0!3m2!1sen!2sus!4v1234567890"
               width="100%"
               height="450"
-              style={{ border: 0, borderRadius: "10px" }}
-              allowFullScreen=""
+              style={{ border: 0, borderRadius: '10px' }}
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Mind Benders Location"
             ></iframe>
           </div>
           <p className="map-note">Click on the map to get directions or view it in full screen</p>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="socials-section">
+          <h2>Follow Us on Socials</h2>
+          <div className="socials-links">
+            <a
+              href="https://www.facebook.com/MindBenderspuzzlesandgames"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link facebook"
+            >
+              <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook" className="social-icon" />
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/mind_benders_puzzles_and_games/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link instagram"
+            >
+              <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" className="social-icon" />
+              Instagram
+            </a>
+          </div>
         </div>
 
         {/* Contact Form Section */}

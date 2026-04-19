@@ -1,17 +1,24 @@
 import { useState } from 'react'
 
+interface FormData {
+  name: string
+  email: string
+  phone: string
+  message: string
+}
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     message: ''
   })
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
+  const [error, setError] = useState<string>('')
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({
       ...prevState,
@@ -20,10 +27,9 @@ export default function ContactForm() {
     setError('')
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    // Validation
     if (!formData.name.trim()) {
       setError('Please enter your name')
       return
@@ -41,14 +47,11 @@ export default function ContactForm() {
       return
     }
 
-    // For now, log the data and show success message
     console.log('Form submitted:', formData)
 
-    // Reset form and show success
     setFormData({ name: '', email: '', phone: '', message: '' })
     setIsSubmitted(true)
 
-    // Hide success message after 5 seconds
     setTimeout(() => {
       setIsSubmitted(false)
     }, 5000)
@@ -112,7 +115,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell us what you'd like to know..."
-            rows="5"
+            rows={5}
             required
           ></textarea>
         </div>

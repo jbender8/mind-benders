@@ -15,8 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .nav-logo {
@@ -26,6 +28,14 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-menu {
@@ -79,6 +89,10 @@
 
   .nav-logo {
     font-size: 1.5rem;
+  }
+
+  .nav-logo-img {
+    height: 40px;
   }
 
   .hamburger {
