@@ -44,6 +44,11 @@ export default function Navigation() {
               News
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/gallery" className="nav-link" onClick={closeMenu}>
+              Gallery
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

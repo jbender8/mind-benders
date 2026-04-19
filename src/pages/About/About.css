@@ -1,433 +1,470 @@
-.page-content {
-  min-height: calc(100vh - 80px);
+/* ===========================
+   MIND BENDERS — ABOUT PAGE
+   =========================== */
+
+.about-page {
   background: white;
+  overflow-x: hidden;
 }
 
-.page-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-.page-section h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 40px;
-  text-align: center;
-  font-weight: 700;
-}
-
-/* About Hero */
+/* ---- HERO ---- */
 .about-hero {
-  background: white;
-  padding: 40px 0;
-  margin-bottom: 50px;
-}
-
-.about-hero h1 {
-  margin-top: 0;
-}
-
-.about-intro {
-  background: white;
-  padding: 30px 0;
-}
-
-.about-intro p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-  margin: 0;
-}
-
-/* Location and Hours Side by Side */
-.about-with-hours {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 50px;
-}
-
-.location-section {
-  background: white;
-  padding: 40px 0;
-}
-
-.location-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin: 0 0 30px;
-  text-align: center;
-}
-
-.location-details {
-  display: flex;
-  justify-content: center;
-}
-
-.location-info-box {
-  background: white;
-  padding: 30px 0;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-
-.location-info-box h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0 0 15px;
-}
-
-.location-info-box p {
-  font-size: 1.1rem;
-  color: #555;
-  margin: 8px 0;
-  font-weight: 500;
-}
-
-/* Hours Box */
-.hours-box {
-  background: white;
-  padding: 40px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.hours-box h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0 0 20px;
-  text-align: center;
-}
-
-.hours-box p {
-  font-size: 1rem;
-  color: #555;
-  margin: 12px 0;
-}
-
-.hours-box strong {
-  color: #333;
-}
-
-.hours-box hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 15px 0;
-}
-
-.hours-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-}
-
-.hours-box li {
-  padding: 8px 0;
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Map Section */
-.map-section {
-  background: white;
-  padding: 40px 0;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #eee;
-}
-
-.map-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin: 0 0 30px;
-  text-align: center;
-}
-
-.map-container {
-  margin-bottom: 20px;
-}
-
-.map-container iframe {
-  display: block;
-  width: 100%;
-}
-
-.map-note {
-  text-align: center;
-  color: #999;
-  font-size: 0.9rem;
-  margin: 0;
-  font-style: italic;
-}
-
-/* Socials Section */
-.socials-section {
-  padding: 40px 0;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-
-.socials-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin: 0 0 30px;
-}
-
-.socials-links {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.social-link {
+  position: relative;
+  min-height: 55vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 65, 23, 0.88) 0%,
+    rgba(37, 65, 23, 0.6) 55%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
+}
+
+.about-hero-content {
   color: white;
+  max-width: 600px;
+}
+
+.about-eyebrow {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8e6b0;
+  margin-bottom: 16px;
+}
+
+.about-hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.about-hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+/* ---- SHARED LABEL & BADGE ---- */
+.ab-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8B6F47;
+  margin-bottom: 14px;
+}
+
+.ab-label.light {
+  color: #c8e6b0;
+}
+
+.ab-badge {
+  background: #f0f7ec;
+  color: #254117;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 50px;
+  border: 1px solid #c8e6b0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---- OUR STORY ---- */
+.about-story {
+  padding: 100px 8vw;
+  background: white;
+}
+
+.about-story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-story-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.14);
+}
+
+.about-story-text h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 22px;
+  line-height: 1.2;
+}
+
+.about-story-text p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+.about-story-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* ---- INFO CARDS ---- */
+.about-info-section {
+  background: #fdf8f3;
+  padding: 80px 8vw;
+}
+
+.about-info-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-location-card {
+  background: #254117;
+  color: white;
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 8px 32px rgba(37, 65, 23, 0.25);
+}
+
+.about-location-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 20px;
+}
+
+.about-location-card address {
+  font-style: normal;
+  margin-bottom: 16px;
+}
+
+.about-location-card address p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  margin: 4px 0;
+  line-height: 1.7;
+}
+
+.about-phone {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c8e6b0;
+  text-decoration: none;
+  margin-bottom: 24px;
   transition: opacity 0.2s;
 }
 
-.social-link:hover {
-  opacity: 0.85;
+.about-phone:hover {
+  opacity: 0.8;
 }
 
-.social-link.facebook {
-  background: #1877F2;
+.about-directions-btn {
+  display: inline-block;
+  background: #8B6F47;
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
 }
 
-.social-link.instagram {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+.about-directions-btn:hover {
+  background: #a07d52;
+  transform: translateY(-2px);
 }
 
-.social-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
+.about-hours-card {
+  background: #254117;
+  color: white;
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 8px 32px rgba(37, 65, 23, 0.25);
 }
 
-/* Contact Form Styling */
-.contact-section {
+.about-hours-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 28px;
+}
+
+.ab-hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ab-hours-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ab-hours-list li:last-child {
+  border-bottom: none;
+}
+
+.ab-hours-list li.ab-closed {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/* ---- MAP ---- */
+.about-map-section {
+  padding: 80px 8vw;
   background: white;
-  padding: 40px 0;
+  text-align: center;
 }
 
-.contact-form-container {
-  max-width: 600px;
+.about-map-inner {
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.contact-form-container h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin: 0 0 10px;
-  text-align: center;
+.about-map-inner h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 36px;
 }
 
-.contact-form-container > p {
-  text-align: center;
-  color: #666;
+.about-map-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- CONNECT ---- */
+.about-connect-section {
+  background: #fdf8f3;
+  padding: 80px 8vw;
+  border-top: 3px solid #8B6F47;
+}
+
+.about-connect-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-socials-col h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+}
+
+.about-socials-col p {
+  color: #555;
   font-size: 1rem;
-  margin: 0 0 25px;
+  line-height: 1.8;
+  margin: 0 0 32px;
 }
 
-.contact-form {
+.ab-social-links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
-.form-group {
+.ab-social-btn {
   display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border-radius: 12px;
   font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.success-message {
-  background: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
-  padding: 15px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.error-message {
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
-  padding: 12px;
-  margin-top: -10px;
-  font-size: 0.9rem;
-}
-
-.submit-button {
-  background: #667eea;
+  font-weight: 700;
+  text-decoration: none;
   color: white;
-  border: none;
-  padding: 14px 30px;
-  font-size: 1.1rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.ab-social-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.ab-social-btn.fb {
+  background: #1877F2;
+}
+
+.ab-social-btn.ig {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.ab-social-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* ---- CONTACT FORM (restyled) ---- */
+.about-form-col .contact-form-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eee;
+}
+
+.about-form-col .contact-form-container h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+  text-align: left;
+}
+
+.about-form-col .contact-form-container > p {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0 0 28px;
+  text-align: left;
+}
+
+.about-form-col .form-group label {
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
+  color: #333;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
 }
 
-.submit-button:hover {
-  background: #5568d3;
+.about-form-col .form-group input,
+.about-form-col .form-group textarea {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
 }
 
-.submit-button:active {
-  background: #667eea;
+.about-form-col .form-group input:focus,
+.about-form-col .form-group textarea:focus {
+  outline: none;
+  border-color: #8B6F47;
 }
 
-/* Responsive Design */
+.about-form-col .submit-button {
+  background: #254117;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
+  width: 100%;
+}
+
+.about-form-col .submit-button:hover {
+  background: #2f5220;
+  transform: translateY(-1px);
+}
+
+.about-form-col .success-message {
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.about-form-col .error-message {
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
 @media (max-width: 768px) {
-  .about-with-hours {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-
-  .page-section {
-    padding: 40px 20px;
-  }
-
-  .page-section h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-  }
-
   .about-hero {
-    padding: 25px 0;
-    margin-bottom: 30px;
+    min-height: 50vh;
   }
 
-  .about-intro {
-    padding: 20px 0;
+  .about-hero-overlay {
+    padding: 0 24px;
+    align-items: flex-end;
+    padding-bottom: 56px;
   }
 
-  .about-intro p {
-    font-size: 1rem;
+  .about-story,
+  .about-info-section,
+  .about-map-section,
+  .about-connect-section {
+    padding: 60px 24px;
   }
 
-  .location-section {
-    padding: 25px 0;
+  .about-story-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
-  .location-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+  .about-story-image img {
+    height: 280px;
   }
 
-  .location-info-box {
-    padding: 20px 0;
-    width: 100%;
+  .about-info-inner {
+    grid-template-columns: 1fr;
   }
 
-  .location-info-box h3 {
-    font-size: 1.3rem;
+  .about-location-card,
+  .about-hours-card {
+    padding: 32px 28px;
   }
 
-  .location-info-box p {
-    font-size: 1rem;
+  .about-connect-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .hours-box {
-    padding: 25px 0;
+  .about-form-col .contact-form-container {
+    padding: 28px 22px;
   }
 
-  .hours-box h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+  .ab-social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+}
 
-  .hours-box p {
-    font-size: 0.95rem;
-  }
-
-  .hours-box li {
-    font-size: 0.9rem;
-  }
-
-  .map-section {
-    padding: 25px 0;
-    margin-bottom: 30px;
-  }
-
-  .map-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .map-container {
-    margin-bottom: 15px;
-  }
-
-  .map-container iframe {
-    height: 300px !important;
-  }
-
-  .contact-section {
-    padding: 25px 0;
-    margin-top: 30px;
-  }
-
-  .contact-form-container h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-
-  .contact-form-container > p {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 16px;
-    padding: 10px 12px;
-  }
-
-  .form-group label {
-    font-size: 0.9rem;
-  }
-
-  .submit-button {
-    padding: 12px 20px;
-    font-size: 1rem;
+@media (max-width: 480px) {
+  .ab-social-links {
+    flex-direction: column;
   }
 }

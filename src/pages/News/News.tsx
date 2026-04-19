@@ -15,8 +15,6 @@ export default function News() {
               src={`https://www.facebook.com/plugins/page.php?href=${facebookPageUrl}&tabs=timeline&width=700&height=1000&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=`}
               width="100%"
               height="1000"
-              scrolling="no"
-              frameBorder={0}
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
