@@ -1,0 +1,80 @@
+/* News Page Styling */
+.page-content {
+  min-height: calc(100vh - 80px);
+  background: white;
+}
+
+.page-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.page-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* News Container */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-item {
+  background: white;
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.news-header {
+  margin-bottom: 15px;
+}
+
+.news-item h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
+  font-style: italic;
+}
+
+.news-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 40px 20px;
+  }
+
+  .page-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .news-item {
+    padding: 20px 0;
+  }
+
+  .news-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .news-content {
+    font-size: 0.9rem;
+  }
+}
