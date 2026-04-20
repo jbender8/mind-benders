@@ -9,8 +9,8 @@ import Chip from '@mui/material/Chip'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
 import ContactForm from '../../components/ContactForm/ContactForm'
-import easterImage from '../../images/holidays-events/easter.jpeg'
-import storefrontImage from '../../images/store-front/storefront.jpeg'
+import easterImage from '../../images/store-front/store-front-car.jpg'
+import storefrontImage from '../../images/logo/sign.jpg'
 
 export default function About() {
   return (

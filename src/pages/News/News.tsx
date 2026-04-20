@@ -2,14 +2,16 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
-import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
+import CardActions from '@mui/material/CardActions'
 import Paper from '@mui/material/Paper'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
+import SafeImg from '../../components/SafeImg/SafeImg'
 
 // Hero
 import xmasFull from '../../images/store-front/xmas-full.jpg'
@@ -17,9 +19,9 @@ import xmasFull from '../../images/store-front/xmas-full.jpg'
 // Highlight photos
 import award10year from '../../images/awards-ack/award10year.jpg'
 import perogiFest from '../../images/holidays-events/perogi-fest-puzzle.jpg'
-import toyShow from '../../images/holidays-events/toy-show1.jpg'
 import easterBunny from '../../images/holidays-events/easterbunny.jpg'
 import halloween1 from '../../images/holidays-events/halloween1.jpg'
+import joelAmyPerade from '../../images/the-owners/joel-amy-perade.jpg'
 
 // Past event flyers (events/)
 import evt4thJuly from '../../images/events/event-4thjuly.jpg'
@@ -32,7 +34,6 @@ import evtGameNight from '../../images/events/event-game-night.jpg'
 import evtGameNight26 from '../../images/events/event-game-night26.jpg'
 import evtJuly4th from '../../images/events/event-july4th.jpg'
 import evtKingDomino from '../../images/events/event-king-dominio-turny.jpg'
-import evtLemonade24 from '../../images/events/event-lemonaid24.jpg'
 import evtLemonade25 from '../../images/events/event-lemonaid25.jpg'
 import evtLoveLetter from '../../images/events/event-love-letter.jpg'
 import evtMay425 from '../../images/events/event-may4-25.jpg'
@@ -55,20 +56,17 @@ const highlights = [
     label: 'Milestone',
     title: '10 Years of Mind Benders!',
     desc: 'We are proud to have served the Whiting community for over a decade. Thank you to every customer who has been part of our journey.',
+    link: null,
+    linkLabel: null,
   },
   {
     img: perogiFest,
     alt: 'Mind Benders at Pierogi Fest',
     label: 'Community Event',
     title: 'Pierogi Fest',
-    desc: 'Mind Benders loves being part of the Whiting community. We always bring puzzles and games to the annual Pierogi Fest!',
-  },
-  {
-    img: toyShow,
-    alt: 'Mind Benders at the Toy Show',
-    label: 'Event',
-    title: 'Toy Show',
-    desc: 'We show off our amazing selection at local toy shows — always a great place to discover something new and exciting.',
+    desc: 'Every summer, Mind Benders heads to Whiting\'s famous Pierogi Fest — one of the largest food festivals in the Midwest! We set up right in the heart of the action, bringing puzzles and games for the whole community to enjoy. Come find us and play a round!',
+    link: 'https://www.pierogifest.net/',
+    linkLabel: 'Visit Pierogi Fest',
   },
   {
     img: easterBunny,
@@ -76,13 +74,35 @@ const highlights = [
     label: 'Seasonal',
     title: 'Easter at the Store',
     desc: 'Spring is always fun at Mind Benders! We love celebrating the seasons with our customers and the community.',
+    link: null,
+    linkLabel: null,
   },
   {
     img: halloween1,
     alt: 'Halloween at Mind Benders',
     label: 'Seasonal',
     title: 'Halloween Fun',
-    desc: 'Things get spooky at Mind Benders every October! Come in for some Halloween-themed games and treats.',
+    desc: 'Things get spooky at Mind Benders every October! We love participating in Trunk or Treat events around the community. We\'re also proud to be part of Wickedly Whiting — Whiting\'s own Halloween celebration filled with costumes, fun, and community spirit. Stop by our booth for games, candy, and Halloween surprises for the whole family!',
+    link: 'https://www.wickedlywhiting.com/',
+    linkLabel: 'Wickedly Whiting',
+  },
+  {
+    img: joelAmyPerade,
+    alt: 'Mind Benders at a community event',
+    label: 'Community',
+    title: 'Community Events',
+    desc: 'Mind Benders loves being part of the Whiting community beyond our storefront! You\'ll find us participating in local events throughout the year — from parades and festivals to pop-ups and neighborhood celebrations. Check out what\'s happening in Whiting and come find us out there!',
+    link: 'https://whitingevents.com/events/',
+    linkLabel: 'Whiting Events Calendar',
+  },
+  {
+    img: xmasFull,
+    alt: 'Christmas at Mind Benders',
+    label: 'Seasonal',
+    title: 'Christmas at Mind Benders',
+    desc: 'The store comes alive every holiday season! Stop in for festive finds, unique gift ideas, and a little holiday magic. Puzzles, games, and brain teasers make the perfect gift for everyone on your list.',
+    link: null,
+    linkLabel: null,
   },
 ]
 
@@ -99,7 +119,6 @@ const pastEvents = [
   { src: evtPerogiFest, alt: 'Pierogi Fest' },
   { src: evtDinoDays, alt: 'Dino Days 2024' },
   { src: evtEaster24, alt: 'Easter 2024' },
-  { src: evtLemonade24, alt: 'Lemonade Stand 2024' },
   { src: evtMay4th, alt: 'May the 4th Be With You' },
   { src: evtPuzzleSwap, alt: 'Puzzle Swap' },
   { src: evtSuperMario, alt: 'Super Mario Day' },
@@ -154,7 +173,7 @@ export default function News() {
           {highlights.map((h) => (
             <Grid key={h.title} size={{ xs: 12, sm: 6, md: 4 }}>
               <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: 3, boxShadow: '0 2px 16px rgba(0,0,0,0.07)', transition: 'transform 0.25s, box-shadow 0.25s', '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 8px 32px rgba(0,0,0,0.13)' } }}>
-                <CardMedia component="img" image={h.img} alt={h.alt} sx={{ height: 220, objectFit: 'cover' }} />
+                <SafeImg src={h.img} alt={h.alt} height={220} objectFit="cover" />
                 <CardContent sx={{ p: 3, flexGrow: 1 }}>
                   <Typography variant="overline" sx={{ color: 'secondary.main', fontWeight: 700, letterSpacing: '0.15em', display: 'block', mb: 0.5 }}>
                     {h.label}
@@ -166,6 +185,13 @@ export default function News() {
                     {h.desc}
                   </Typography>
                 </CardContent>
+                {h.link && (
+                  <CardActions sx={{ px: 3, pb: 3 }}>
+                    <Button variant="outlined" size="small" href={h.link} target="_blank" rel="noopener noreferrer" sx={{ borderRadius: 2 }}>
+                      {h.linkLabel}
+                    </Button>
+                  </CardActions>
+                )}
               </Card>
             </Grid>
           ))}
@@ -195,15 +221,26 @@ export default function News() {
                   '&:hover img': { transform: 'scale(1.03)' },
                 }}
               >
-                <img
-                  src={evt.src}
-                  alt={evt.alt}
-                  loading="lazy"
-                  style={{ display: 'block', width: '100%', transition: 'transform 0.3s ease' }}
-                />
+                <SafeImg src={evt.src} alt={evt.alt} style={{ transition: 'transform 0.3s ease' }} />
               </ImageListItem>
             ))}
           </ImageList>
+          <Box sx={{ mt: 6, p: { xs: 3, md: 4 }, bgcolor: 'primary.main', borderRadius: 3, textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 1 }}>
+              Want to know what's coming up next?
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', mb: 3 }}>
+              Follow us on Facebook and Instagram for upcoming events, new arrivals, and store news.
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Button variant="contained" href="https://www.facebook.com/MindBenderspuzzlesandgames" target="_blank" rel="noopener noreferrer" sx={{ bgcolor: '#1877F2', borderRadius: 2, '&:hover': { bgcolor: '#1565c0' } }}>
+                Follow on Facebook
+              </Button>
+              <Button variant="contained" href="https://www.instagram.com/mind_benders_puzzles_and_games/" target="_blank" rel="noopener noreferrer" sx={{ background: 'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)', borderRadius: 2, '&:hover': { opacity: 0.88 } }}>
+                Follow on Instagram
+              </Button>
+            </Box>
+          </Box>
         </Container>
       </Box>
 
