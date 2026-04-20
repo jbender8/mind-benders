@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mind Benders Puzzles &amp; Games</title>
+    <script>
+      // Redirect to index with the path encoded as a query param
+      var path = window.location.pathname.replace('/mind-benders', '');
+      window.location.replace(
+        '/mind-benders/?p=' + encodeURIComponent(path) + window.location.search + window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

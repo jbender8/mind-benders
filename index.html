@@ -5,6 +5,15 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mind Benders - Puzzles and Games</title>
+    <script>
+      // Handle GitHub Pages SPA redirect
+      (function() {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          window.history.replaceState(null, '', '/mind-benders' + decodeURIComponent(p));
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
